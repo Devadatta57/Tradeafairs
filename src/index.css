@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Tailwind v4 reads theme tokens from CSS; tailwind.config.js is not loaded. */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #111c3a;
+  --color-brand: #035cfc;
+}
+
+/* Page-width wrapper shared by the top bar, nav, hero and cards */
+@utility shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1476px;
+  padding-inline: 16px;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f7f6f3] text-gray-800 antialiased;
+  }
+}

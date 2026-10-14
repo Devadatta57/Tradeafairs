@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1250px;
+    height: 157px;
+    background: #FDFDFD;
+    overflow: hidden;
+  }
+  svg {
+    display: block;
+    width: 1250px;
+    height: 157px;
+  }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 157" width="1250" height="157">
+  <defs>
+    <!-- Soft dropshadows -->
+    <filter id="shadow-main" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0B2A55" flood-opacity="0.08" />
+    </filter>
+    <filter id="shadow-light" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0B2A55" flood-opacity="0.05" />
+    </filter>
+
+    <linearGradient id="map-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FDFDFD" stop-opacity="0" />
+      <stop offset="100%" stop-color="#FDFDFD" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. BASE BACKGROUND: PURE #FDFDFD -->
+  <rect width="1250" height="157" fill="#FDFDFD" />
+
+  <!-- 2. LEFT 45%: FAINT DOTTED WORLD MAP -->
+  <g id="world-map">
+    <image href="fairs-banner-art.png.bak" x="0" y="0" width="1250" height="157" />
+    <rect x="540" y="0" width="710" height="157" fill="#FDFDFD" />
+    <rect x="470" y="0" width="70" height="157" fill="url(#map-fade)" />
+  </g>
+
+  <!-- 3. FLOOR SHADOWS UNDER ALL RIGHT-SIDE ELEMENTS -->
+  <g id="ground-shadows">
+    <ellipse cx="600" cy="151" rx="28" ry="3" fill="#E2E8F0" opacity="0.65" />
+    <ellipse cx="682" cy="151" rx="20" ry="3" fill="#CBD5E0" opacity="0.65" />
+    <ellipse cx="738" cy="152" rx="36" ry="3.5" fill="#CBD5E0" opacity="0.6" />
+    <ellipse cx="794" cy="151" rx="20" ry="3" fill="#CBD5E0" opacity="0.65" />
+    <ellipse cx="935" cy="152" rx="80" ry="3.5" fill="#E2E8F0" opacity="0.65" />
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- 4. BOOTH BACK-WALL & DISPLAY SHELVES (X: 840 to 1010)   -->
+  <!-- ======================================================== -->
+  <g id="booth-wall" filter="url(#shadow-light)">
+    <!-- Main Back Wall Panel -->
+    <rect x="844" y="14" width="170" height="136" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2" />
+    <!-- Top Architectural Fascia Beam -->
+    <rect x="840" y="10" width="178" height="13" rx="3" fill="#0B2A55" />
+    <rect x="840" y="21" width="178" height="3" fill="#D4A227" />
+
+    <!-- Spotlight Fixtures -->
+    <g transform="translate(885, 12)">
+      <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+      <path d="M-2 2 L-5 7 L5 7 L2 2 Z" fill="#CBD5E0" />
+      <polygon points="-4,7 4,7 8,22 -8,22" fill="#FFFFFF" opacity="0.3" />
+    </g>
+    <g transform="translate(950, 12)">
+      <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+      <path d="M-2 2 L-5 7 L5 7 L2 2 Z" fill="#CBD5E0" />
+      <polygon points="-4,7 4,7 8,22 -8,22" fill="#FFFFFF" opacity="0.3" />
+    </g>
+
+    <!-- ==================== DISPLAY SHELF 1 (y: 54) ==================== -->
+    <rect x="854" y="52" width="150" height="5.5" rx="2" fill="#0B2A55" />
+    <rect x="854" y="52" width="150" height="1.5" rx="1" fill="#D4A227" />
+
+    <!-- SPICE JARS -->
+    <!-- Jar 1: Turmeric Gold #D4A227 -->
+    <g transform="translate(862, 34)">
+      <rect x="2" y="0" width="13" height="4" rx="1.5" fill="#A0522D" />
+      <rect x="4" y="3" width="9" height="2" fill="#CBD5E0" />
+      <rect x="0" y="5" width="17" height="13" rx="3" fill="#D4A227" />
+      <path d="M2 7 L5 7 L5 16 L2 16 Z" fill="#FFFFFF" opacity="0.45" />
+    </g>
+    <!-- Jar 2: Saffron Orange #F26B3A -->
+    <g transform="translate(885, 32)">
+      <rect x="2" y="0" width="14" height="4" rx="1.5" fill="#A0522D" />
+      <rect x="4" y="3" width="10" height="2" fill="#CBD5E0" />
+      <rect x="0" y="5" width="18" height="15" rx="3" fill="#F26B3A" />
+      <path d="M2 7 L5 7 L5 18 L2 18 Z" fill="#FFFFFF" opacity="0.45" />
+    </g>
+    <!-- Jar 3: Cardamom Green #38A169 -->
+    <g transform="translate(909, 35)">
+      <rect x="2" y="0" width="12" height="4" rx="1.5" fill="#A0522D" />
+      <rect x="4" y="3" width="8" height="2" fill="#CBD5E0" />
+      <rect x="0" y="5" width="16" height="12" rx="3" fill="#38A169" />
+      <path d="M2 7 L5 7 L5 15 L2 15 Z" fill="#FFFFFF" opacity="0.45" />
+    </g>
+
+    <!-- TEXTILE ROLLS -->
+    <!-- Textile Roll 1: Royal Blue #1F4FD8 -->
+    <g transform="translate(933, 36)">
+      <rect x="0" y="0" width="30" height="16" rx="4" fill="#1F4FD8" />
+      <ellipse cx="30" cy="8" rx="3.5" ry="8" fill="#163AA8" />
+      <ellipse cx="30" cy="8" rx="2" ry="5" fill="#4C78F5" />
+      <line x1="2" y1="4" x2="28" y2="4" stroke="#6892F8" stroke-width="1.2" stroke-linecap="round" />
+    </g>
+    <!-- Textile Roll 2: Warm Orange #F26B3A -->
+    <g transform="translate(970, 38)">
+      <rect x="0" y="0" width="26" height="14" rx="4" fill="#F26B3A" />
+      <ellipse cx="26" cy="7" rx="3" ry="7" fill="#D95323" />
+      <ellipse cx="26" cy="7" rx="1.6" ry="4" fill="#FFA585" />
+      <line x1="2" y1="3" x2="24" y2="3" stroke="#FFB094" stroke-width="1" stroke-linecap="round" />
+    </g>
+
+    <!-- ==================== DISPLAY SHELF 2 (y: 92) ==================== -->
+    <rect x="854" y="90" width="150" height="5.5" rx="2" fill="#0B2A55" />
+    <rect x="854" y="90" width="150" height="1.5" rx="1" fill="#F26B3A" />
+
+    <!-- PACKAGED FOOD BOXES -->
+    <!-- Box 1: Royal Blue & White Carton -->
+    <g transform="translate(862, 68)">
+      <rect x="0" y="0" width="22" height="22" rx="2.5" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1" />
+      <path d="M0 0 L22 0 L22 8 L0 8 Z" fill="#1F4FD8" />
+      <circle cx="11" cy="14" r="3.5" fill="#D4A227" />
+      <rect x="5" y="19" width="12" height="1.5" rx="0.5" fill="#CBD5E0" />
+    </g>
+    <!-- Box 2: Warm Orange & Gold Box -->
+    <g transform="translate(890, 65)">
+      <rect x="0" y="0" width="26" height="25" rx="2.5" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1" />
+      <polygon points="0,0 26,0 26,12 0,6" fill="#F26B3A" />
+      <rect x="5" y="14" width="16" height="3" rx="1" fill="#D4A227" />
+      <rect x="5" y="19" width="10" height="2" rx="0.5" fill="#E2E8F0" />
+    </g>
+    <!-- Box 3: Organic Green Carton -->
+    <g transform="translate(922, 68)">
+      <rect x="0" y="0" width="20" height="22" rx="2.5" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1" />
+      <rect x="0" y="0" width="20" height="7" fill="#38A169" />
+      <ellipse cx="10" cy="14" rx="4" ry="2.5" fill="#48BB78" />
+      <rect x="5" y="18" width="10" height="1.5" rx="0.5" fill="#CBD5E0" />
+    </g>
+    <!-- Textile Roll 3: Golden Silk Bolt -->
+    <g transform="translate(948, 74)">
+      <rect x="0" y="0" width="30" height="16" rx="4" fill="#D4A227" />
+      <ellipse cx="30" cy="8" rx="3.5" ry="8" fill="#B78214" />
+      <ellipse cx="30" cy="8" rx="2" ry="5" fill="#FCE588" />
+      <line x1="2" y1="4" x2="28" y2="4" stroke="#FFEBA5" stroke-width="1.2" stroke-linecap="round" />
+    </g>
+    <!-- Tall Glass Specialty Jar -->
+    <g transform="translate(984, 70)">
+      <rect x="2" y="0" width="11" height="4" rx="1.5" fill="#718096" />
+      <rect x="0" y="4" width="15" height="16" rx="3" fill="#F26B3A" />
+      <circle cx="7.5" cy="12" r="3" fill="#FFFFFF" opacity="0.5" />
+    </g>
+
+    <!-- ==================== STACKED CARDBOARD EXPORT BOXES ==================== -->
+    <g transform="translate(856, 122)">
+      <rect x="0" y="0" width="40" height="27" rx="2" fill="#D69E2E" />
+      <rect x="0" y="0" width="40" height="5" fill="#B78214" />
+      <rect x="17" y="0" width="6" height="27" fill="#0B2A55" opacity="0.85" />
+      <g stroke="#0B2A55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 13 L10 9 L13 13 M10 9 L10 20" />
+        <path d="M28 13 L31 9 L34 13 M31 9 L31 20" />
+      </g>
+    </g>
+    <g transform="translate(870, 101)">
+      <rect x="0" y="0" width="32" height="21" rx="2" fill="#E2AC3E" />
+      <rect x="0" y="0" width="32" height="4.5" fill="#C68F23" />
+      <rect x="13" y="0" width="5" height="21" fill="#F26B3A" opacity="0.85" />
+      <rect x="4" y="8" width="8" height="6" rx="1" fill="#FFFFFF" opacity="0.8" />
+    </g>
+    <g transform="translate(902, 124)">
+      <rect x="0" y="0" width="30" height="25" rx="2" fill="#C68F23" />
+      <rect x="0" y="0" width="30" height="4.5" fill="#A47214" />
+      <rect x="12" y="0" width="5" height="25" fill="#1F4FD8" opacity="0.85" />
+      <path d="M6 8 L10 8 L10 13 Q8 15 6 13 Z M8 14 L8 18 M6 18 L10 18" fill="none" stroke="#0B2A55" stroke-width="1.2" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- 5. POTTED PLANT & LEAF (X: 1022 to 1052, Y: 28 to 92)    -->
+  <!-- ======================================================== -->
+  <g id="plant-group" filter="url(#shadow-light)">
+    <rect x="1026" y="64" width="22" height="28" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" />
+    <rect x="1029" y="70" width="16" height="3" rx="1" fill="#D4A227" />
+
+    <path d="M1029 52 L1045 52 L1043 64 L1031 64 Z" fill="#F26B3A" />
+    <rect x="1028" y="50" width="18" height="3" rx="1.5" fill="#D95323" />
+
+    <!-- Lush Green Leaves -->
+    <path d="M1037 51 C1039 38, 1047 34, 1051 38 C1047 44, 1041 48, 1037 51 Z" fill="#22543D" />
+    <path d="M1037 51 C1036 36, 1036 28, 1037 26 C1039 30, 1041 40, 1037 51 Z" fill="#38A169" />
+    <path d="M1037 51 C1031 40, 1021 38, 1019 41 C1024 46, 1031 48, 1037 51 Z" fill="#48BB78" />
+    <path d="M1037 51 C1032 45, 1026 48, 1024 52 C1029 53, 1033 52, 1037 51 Z" fill="#68D391" />
+    <!-- Single soft curved leaf on far right -->
+    <path d="M1045 53 C1050 50, 1055 54, 1052 60 C1048 59, 1046 56, 1045 53 Z" fill="#48BB78" />
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- 6. ROLL-UP EXHIBITION STANDEE (X: 575 to 630)            -->
+  <!-- ======================================================== -->
+  <g id="rollup-standee" filter="url(#shadow-main)">
+    <rect x="584" y="147" width="38" height="4" rx="2" fill="#718096" />
+    <rect x="589" y="144" width="28" height="4" rx="1.5" fill="#A0AEC0" />
+    <rect x="602" y="16" width="2" height="128" fill="#CBD5E0" />
+
+    <!-- Canvas -->
+    <rect x="578" y="16" width="50" height="128" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" />
+    <path d="M578 20 C578 17, 580 16, 583 16 L623 16 C626 16, 628 17, 628 20 L628 35 L578 35 Z" fill="#1F4FD8" />
+    <rect x="578" y="35" width="50" height="3.5" fill="#F26B3A" />
+    <rect x="578" y="138" width="50" height="6" rx="1" fill="#D4A227" />
+
+    <!-- SIMPLE GLOBE ICON -->
+    <g transform="translate(603, 54)">
+      <circle cx="0" cy="0" r="12" fill="#EEF2F6" stroke="#1F4FD8" stroke-width="1.8" />
+      <ellipse cx="0" cy="0" rx="12" ry="4.5" fill="none" stroke="#1F4FD8" stroke-width="1.3" />
+      <ellipse cx="0" cy="0" rx="5.5" ry="12" fill="none" stroke="#1F4FD8" stroke-width="1.3" />
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#1F4FD8" stroke-width="1.3" />
+    </g>
+
+    <line x1="586" y1="76" x2="620" y2="76" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- SIMPLE CONTAINER ICON -->
+    <g transform="translate(588, 88)">
+      <rect x="0" y="0" width="30" height="18" rx="2" fill="#F26B3A" stroke="#0B2A55" stroke-width="1.5" />
+      <line x1="6" y1="2" x2="6" y2="16" stroke="#FFFFFF" stroke-width="1.3" opacity="0.8" />
+      <line x1="11" y1="2" x2="11" y2="16" stroke="#FFFFFF" stroke-width="1.3" opacity="0.8" />
+      <line x1="15" y1="2" x2="15" y2="16" stroke="#FFFFFF" stroke-width="1.3" opacity="0.8" />
+      <line x1="19" y1="2" x2="19" y2="16" stroke="#FFFFFF" stroke-width="1.3" opacity="0.8" />
+      <line x1="24" y1="2" x2="24" y2="16" stroke="#FFFFFF" stroke-width="1.3" opacity="0.8" />
+      <circle cx="3" cy="3" r="1.2" fill="#0B2A55" />
+      <circle cx="27" cy="3" r="1.2" fill="#0B2A55" />
+      <circle cx="3" cy="15" r="1.2" fill="#0B2A55" />
+      <circle cx="27" cy="15" r="1.2" fill="#0B2A55" />
+    </g>
+
+    <rect x="588" y="117" width="30" height="3" rx="1.5" fill="#D4A227" />
+    <rect x="588" y="123" width="20" height="2.5" rx="1" fill="#CBD5E0" />
+    <rect x="588" y="128" width="26" height="2.5" rx="1" fill="#CBD5E0" />
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- 7. EXHIBITION BOOTH COUNTER (X: 712 to 776)              -->
+  <!-- Centered between the two figures                         -->
+  <!-- ======================================================== -->
+  <g id="booth-counter" filter="url(#shadow-main)">
+    <rect x="712" y="78" width="64" height="70" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" />
+    <!-- Architectural Ribbon Stripes -->
+    <rect x="712" y="88" width="64" height="4.5" fill="#D4A227" />
+    <rect x="712" y="92.5" width="64" height="5.5" fill="#1F4FD8" />
+    <rect x="712" y="98" width="64" height="3" fill="#F26B3A" />
+    <rect x="710" y="145" width="68" height="4" rx="2" fill="#CBD5E0" />
+    <rect x="708" y="76" width="72" height="5" rx="2.5" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1" />
+
+    <!-- Open Laptop on Counter (facing businessman) -->
+    <g id="laptop">
+      <polygon points="714,76 734,76 736,78 712,78" fill="#718096" />
+      <polygon points="716,62 732,62 733,76 715,76" fill="#0B2A55" stroke="#4A5568" stroke-width="0.8" />
+      <!-- Dashboard Bars UI -->
+      <polygon points="717,64 730,64 731,74 716,74" fill="#EBF8FF" />
+      <rect x="718" y="66" width="10" height="2" rx="0.5" fill="#1F4FD8" />
+      <rect x="718" y="69" width="3" height="3.5" rx="0.5" fill="#38A169" />
+      <rect x="722" y="68" width="3" height="4.5" rx="0.5" fill="#1F4FD8" />
+      <rect x="726" y="70" width="3" height="2.5" rx="0.5" fill="#F26B3A" />
+    </g>
+
+    <!-- Brochures on Counter -->
+    <g id="brochures">
+      <rect x="752" y="74" width="16" height="3" rx="0.5" fill="#CBD5E0" />
+      <rect x="750" y="71" width="16" height="3.5" rx="0.5" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="0.6" />
+      <rect x="750" y="71" width="5" height="3.5" fill="#F26B3A" />
+    </g>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- 8. THE TWO BUSINESS FIGURES & THE CRISP HANDSHAKE        -->
+  <!-- ======================================================== -->
+
+  <!-- CHARACTER 1: CONFIDENT BUSINESSMAN IN ROYAL-BLUE SUIT (X: 660 to 715) -->
+  <g id="businessman" filter="url(#shadow-light)">
+    <!-- Trousers & Legs -->
+    <!-- Back Leg -->
+    <path d="M668 94 L671 146 L679 146 L675 94 Z" fill="#163AA8" />
+    <!-- Front Leg -->
+    <path d="M675 94 L680 147 L689 147 L685 94 Z" fill="#1F4FD8" />
+    <!-- Navy Shoes -->
+    <path d="M670 146 L664 150 L680 150 L679 146 Z" fill="#0B2A55" />
+    <path d="M680 147 L675 151 L692 151 L689 147 Z" fill="#0B2A55" />
+
+    <!-- Torso: Royal-Blue Blazer (#1F4FD8) -->
+    <path d="M665 48 C665 48, 686 46, 694 48 C697 64, 693 84, 690 96 L666 96 C664 84, 663 64, 665 48 Z" fill="#1F4FD8" />
+    <path d="M665 48 L669 96 L666 96 L663 60 Z" fill="#163AA8" />
+
+    <!-- Left Arm: Casual hand on hip/waist -->
+    <path d="M666 50 C658 60, 656 70, 661 78 L667 76 C663 70, 664 62, 671 52 Z" fill="#163AA8" />
+    <ellipse cx="663" cy="78" rx="3.5" ry="3.5" fill="#F6AD55" />
+
+    <!-- Crisp White Shirt & Orange Tie -->
+    <polygon points="676,48 684,48 686,70 675,70" fill="#FFFFFF" />
+    <polygon points="674,48 678,54 680,48" fill="#F0F4F8" />
+    <polygon points="686,48 682,54 680,48" fill="#F0F4F8" />
+    <polygon points="679,52 682,52 683,72 680.5,76 678,72" fill="#F26B3A" />
+    <polygon points="666,48 674,72 670,72" fill="#163AA8" />
+    <polygon points="692,48 683,72 687,72" fill="#163AA8" />
+
+    <!-- Neck & Head -->
+    <rect x="677" y="42" width="7" height="8" rx="2" fill="#ED8936" />
+    <circle cx="681" cy="33" r="11" fill="#F6AD55" />
+    <path d="M684 30 L693 33 L690 39 L682 42 Z" fill="#F6AD55" />
+    <circle cx="688" cy="32.5" r="1.4" fill="#0B2A55" />
+    <path d="M687 36.5 Q690 38 687 39.5" stroke="#DD6B20" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <circle cx="679" cy="35" r="2.5" fill="#ED8936" />
+    <!-- Hair -->
+    <path d="M671 31 C671 21, 680 17, 690 21 C694 23, 693 27, 689 27 C687 27, 685 23, 679 23 C673 23, 671 29, 671 35 Z" fill="#2D3748" />
+
+    <!-- Right Arm: Natural bent arm reaching forward across counter into handshake -->
+    <!-- Upper arm angling down and forward -->
+    <path d="M690 50 L708 65 L703 70 L686 56 Z" fill="#1F4FD8" />
+    <!-- Forearm extending horizontally to handshake clasp -->
+    <path d="M703 66 L730 73 L728 80 L701 71 Z" fill="#1F4FD8" />
+    <rect x="727" y="73" width="4" height="6" rx="1" fill="#FFFFFF" transform="rotate(15 727 73)" />
+  </g>
+
+  <!-- CHARACTER 2: FOREIGN BUYER IN NAVY SUIT (X: 770 to 825) -->
+  <g id="foreign-buyer" filter="url(#shadow-light)">
+    <!-- Navy Trousers & Legs -->
+    <!-- Front Leg -->
+    <path d="M788 94 L784 146 L793 146 L796 94 Z" fill="#0B2A55" />
+    <!-- Back Leg -->
+    <path d="M796 94 L797 147 L806 147 L805 94 Z" fill="#071B36" />
+    <!-- Shoes -->
+    <path d="M783 146 L777 150 L794 150 L793 146 Z" fill="#1A202C" />
+    <path d="M796 147 L792 151 L808 151 L806 147 Z" fill="#1A202C" />
+
+    <!-- Torso: Tailored Navy Suit Jacket (#0B2A55) -->
+    <path d="M782 48 C782 48, 804 46, 810 48 C813 64, 811 84, 808 96 L784 96 C782 84, 780 64, 782 48 Z" fill="#0B2A55" />
+    <path d="M808 48 L812 96 L808 96 L806 60 Z" fill="#071B36" />
+
+    <!-- Left Arm holding executive leather portfolio -->
+    <path d="M808 48 C816 60, 818 72, 814 84 L807 82 C811 74, 810 62, 804 50 Z" fill="#071B36" />
+    <ellipse cx="812" cy="84" rx="3.5" ry="3.5" fill="#ED8936" />
+
+    <!-- Orange / Tan Leather Portfolio -->
+    <g transform="translate(807, 78) rotate(12)">
+      <rect x="0" y="0" width="16" height="22" rx="2" fill="#F26B3A" stroke="#C05621" stroke-width="0.8" />
+      <rect x="0" y="8" width="16" height="2" fill="#D4A227" />
+      <rect x="6" y="7" width="4" height="4" rx="1" fill="#D4A227" />
+    </g>
+
+    <!-- White Shirt, Royal Blue Tie & Lapels -->
+    <polygon points="790,48 798,48 796,70 785,70" fill="#FFFFFF" />
+    <polygon points="788,48 792,54 793,48" fill="#F0F4F8" />
+    <polygon points="800,48 796,54 795,48" fill="#F0F4F8" />
+    <polygon points="793,52 796,52 797,72 793.5,76 791,72" fill="#1F4FD8" />
+    <circle cx="794" cy="62" r="1" fill="#D4A227" />
+    <polygon points="782,48 789,72 785,72" fill="#071B36" />
+    <polygon points="806,48 798,72 802,72" fill="#071B36" />
+
+    <!-- Neck & Head Profile facing left -->
+    <rect x="791" y="42" width="7" height="8" rx="2" fill="#DD6B20" />
+    <circle cx="795" cy="33" r="11" fill="#ED8936" />
+    <path d="M792 30 L783 33 L786 39 L794 42 Z" fill="#ED8936" />
+    <circle cx="788" cy="32.5" r="1.4" fill="#0B2A55" />
+    <path d="M789 36.5 Q786 38 789 39.5" stroke="#C05621" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <circle cx="798" cy="35" r="2.5" fill="#DD6B20" />
+    <!-- Hair -->
+    <path d="M805 31 C805 21, 796 17, 786 21 C782 23, 783 27, 787 27 C789 27, 791 23, 797 23 C803 23, 805 29, 805 35 Z" fill="#4A5568" />
+
+    <!-- Right Arm: Natural bent arm reaching forward into handshake -->
+    <path d="M784 50 L766 65 L771 70 L788 56 Z" fill="#0B2A55" />
+    <path d="M771 66 L745 73 L747 80 L773 71 Z" fill="#0B2A55" />
+    <rect x="743" y="73" width="4" height="6" rx="1" fill="#FFFFFF" transform="rotate(-15 743 73)" />
+  </g>
+
+  <!-- THE HANDSHAKE (PERFECT NATURAL INTERLOCK RIGHT ABOVE COUNTER FRONT, X: 732 to 746) -->
+  <g id="handshake" filter="url(#shadow-light)">
+    <!-- Businessman Hand (reaching right) -->
+    <path d="M731 72 Q738 70 743 74 Q738 79 731 77 Z" fill="#F6AD55" />
+    <!-- Buyer Hand (reaching left) -->
+    <path d="M746 72 Q739 70 735 75 Q740 79 746 77 Z" fill="#ED8936" />
+    <!-- Clasp fingers detail -->
+    <ellipse cx="739" cy="74.5" rx="3.5" ry="2.2" fill="#DD6B20" />
+    <ellipse cx="739" cy="73.5" rx="2" ry="1.2" fill="#F6AD55" />
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- 9. STRICT BOTTOM-RIGHT EMPTY ZONE GUARANTEE              -->
+  <!-- Rightmost 15% (x >= 1062.5), Bottom 35% (y >= 102)      -->
+  <!-- 100% untouched pristine white #FDFDFD                    -->
+  <!-- ======================================================== -->
+  <rect x="1062.5" y="102" width="187.5" height="55" fill="#FDFDFD" />
+
+</svg>
+</body>
+</html>
